@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>findYourDoc</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/search.css">
+  <link rel="icon" href="C:\Users\avais\OneDrive\Desktop\FindYourDoc\images\2.png" type="image/x-icon" />
+  <script src="searh.js"></script>
+</head>
+<body>
+   <!-- Navbar -->
+   <nav id="navbar-top" class="navbar sticky-top navbar-expand-lg navbar-dark " style="background-color: black;">
+    <a class="navbar-brand" href="#"><img src="images/1.png"> findYourDoc</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="showPrompt()">Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="booking.html">Booking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="signup_page.html">Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    <div class="col-lg-7 mx-auto p-3 py-md-5">
+        <form name="appointment-form" method="post" action="booking.php"  >
+          <fieldset style="background-color: #fafafa8c; display: block;margin-left: 2px;margin-right: 2px;
+          padding-top: 0.35em;padding-bottom: 0.625em;padding-left: 0.75em;padding-right: 0.75em;
+          border: 5px solid #ef8172;">
+          <legend style="background-color:#ef8172; color: white; padding: 5px 10px; text-align:center;">APPOINTMENT BOOKING</legend>
+          <b><div class="row">
+        <div class="col-md-6">
+          <label  class="form-label" >Full name</label>
+          <input type="text" class="form-control" name="txt-full-name" required>
+        </div>
+        <div class="col-md-6">
+          <label  class="form-label" >Username</label>
+          <input type="text" class="form-control" id="inputEmail4" name="txt-user" required>
+        </div></div>
+  <div class="row">
+        <div class="col-md-6">
+          <label  class="form-label" >Mobile Number</label>
+          <input type="tel" class="form-control" name="txt-mobile-number" required>
+        </div>
+        <div class="col-md-6">
+          <br><label  class="form-label">Gender</label>
+          &emsp;<input type="radio" class="form-check-input" name="txt-gender" value="male" ><label style="color: red;">M</label>
+          &emsp;<input type="radio" class="form-check-input" name="txt-gender" value="female"><label style="color: red;">F</label>
+          &emsp;<input type="radio" class="form-check-input" name="txt-gender" value="other"><label style="color: red;">Others</label>
+       </div>
+       
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label  class="form-label" >Age</label>
+            <input type="number" class="form-control" name="txt-age" required>
+          </div>
+        <div class="col-md-6">
+          <label class="form-label">Doctor</label>
+        <select class="form-select" aria-label="Default select example" name="doctors" required>
+          <option selected>select any ....</option>
+          <option value="11">Dr. Harpreet Singh</option>
+          <option value="12">Dr. Seema Sharma</option>
+          <option value="13">Dr. Mohit Gupta</option>
+          <option value="21">Dr. Charandeep Singh</option>
+          <option value="22">Dr. Suresh Kumar Goyal</option>
+          <option value="23">Dr. Veena Bharti</option>
+          <option value="31">Dr. Gaurav Kaushik</option>
+          <option value="32">Dr. Rakesh Gupta</option>
+          <option value="33">Dr. Komal Gupta</option>
+          <option value="41">Dr. Narayan Thakur</option>
+          <option value="42">Dr. Shaloo Malik</option>
+          <option value="43">Dr. Daljit Singh</option>
+          <option value="51">Dr. Monica Mahajan</option>
+          <option value="52">Dr. Shashi Goyal</option>
+          <option value="53">Dr. Sanjay Bansal</option>
+          <option value="61">Dr. Gurmeet Singh</option>
+          <option value="62">Dr. Joginder Singh</option>
+          <option value="63">Dr. Surbhi Bhalla</option>
+          <option value="71">Dr. Sonia Sharma</option>
+          <option value="72">Dr. Naveen Monga</option>
+          <option value="73">Dr. Shabnam Singh</option>
+        </select>
+       </div>
+       </div>
+        <div class='row'>
+        <div class="col-md-6">
+          <label  class="form-label">Date of Appointment</label>
+          <input type="date" class="form-control" name="txt-date" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Time of Appointment : </label>
+        <select class="form-select" aria-label="Default select example" name="appointment-time-selection" required>
+          <option selected>select any ....</option>
+          <option value="9am">9 am</option>
+          <option value="10am">10 am</option>
+          <option value="11pm">11 am</option>
+          <option value="4pm">4 pm</option>
+          <option value="5pm">5 pm</option>
+          <option value="6pm">6 pm</option>
+        </select>
+       </div></div>
+        <div class="col-md-6">
+          <label  class="form-label">Fee</label>
+          <input type="input" class="form-control" name="txtfee" value=250 readonly>
+        </div><br>
+            <div class="d-grid gap-2 col-6 mx-auto">
+          <button class="btn btn-outline-danger" type="submit" value="Login" name="btn-submit"> PROCEED TO PAY </button><br>  
+     </div></b></fieldset></form></div>
+     <div id="chevron">
+
+      <br>
+      <img src="images/1.png">
+      <h1 class="last">findYourDoc</h1>
+      <br>
+      <br>
+      <p>Copyright @ 2023 | Vaishali, Khushboo, Chetali and Jasmeen</p>
+      <br>
+  
+  
+    </div>
+    <div style="margin:0px; background-color:#ff4c68">
+      <br>
+      <br>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>findYourDoc</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/payment.css">
+    <link rel="stylesheet" href="css/confirmation.css">
+    <link rel="icon" href="C:\Users\avais\OneDrive\Desktop\FindYourDoc\images\2.png" type="image/x-icon" />
+    <script src="searh.js"></script>
+    <script src="confirmation.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar-top" class="navbar sticky-top navbar-expand-lg navbar-dark " style="background-color: black;">
+        <a class="navbar-brand" href="#"><img src="images/1.png"> findYourDoc</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showPrompt()">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="booking.html">Booking</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="signup_page.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-lg-0 mb-3">
+                <div class="card p-3">
+                    <div class="img-box">
+                        <img src="https://www.freepnglogos.com/uploads/visa-logo-download-png-21.png" alt="">
+                    </div>
+                    <div class="number">
+                        <label class="fw-bold" for="">**** **** **** 8772</label>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <small><span class="fw-bold">Expiry date:</span><span>04/25</span></small>
+                        <small><span class="fw-bold">Name:</span><span>Rajesh</span></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-lg-0 mb-3">
+                <div class="card p-3">
+                    <div class="img-box">
+                        <img src="https://www.freepnglogos.com/uploads/mastercard-png/file-mastercard-logo-svg-wikimedia-commons-4.png"
+                            alt="">
+                    </div>
+                    <div class="number">
+                        <label class="fw-bold">**** **** **** 1060</label>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <small><span class="fw-bold">Expiry date:</span><span>10/23</span></small>
+                        <small><span class="fw-bold">Name:</span><span>Preeti</span></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-lg-0 mb-3">
+                <div class="card p-3">
+                    <div class="img-box">
+                        <img src="https://www.freepnglogos.com/uploads/discover-png-logo/credit-cards-discover-png-logo-4.png"
+                            alt="">
+                    </div>
+                    <div class="number">
+                        <label class="fw-bold">**** **** **** 3410</label>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <small><span class="fw-bold">Expiry date:</span><span>12/27</span></small>
+                        <small><span class="fw-bold">Name:</span><span>Vaibhav</span></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-4">
+                <div class="card p-3">
+                    <p class="mb-0 fw-bold h4">Payment Methods</p>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card p-3">
+                    <div class="card-body border p-0">
+                        <p>
+                            <a class="btn p-2 w-100 h-100 d-flex align-items-center justify-content-between"
+                                data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true"
+                                aria-controls="collapseExample">
+                                <span class="fw-bold">UPI</span>
+                                <span class="fab fa-cc-paypal">
+                                </span>
+                            </a>
+                        </p>
+                        <div class="collapse show p-3 pt-0" id="collapseExample">
+                            <div class="row">
+                                <div class="col-lg-5 mb-lg-0 mb-3">
+                                    <p class="h4 mb-0">Summary</p>
+                                    <p class="mb-0"><span class="fw-bold">Payment For:</span><span class="c-green">
+                                            Appointment Booking</span></p>
+                                    <p class="mb-0"><span class="fw-bold">Fees:</span><span class="c-green"> 250</span>
+                                    </p>
+                                    <p class="mb-0">UPI (Unified Payments Interface) is a payment system that allows
+                                        individuals to transfer funds from one bank account to another in real-time.</p>
+                                </div>
+                                <div class="col-lg-7">
+                                    <form action="" class="form">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form__div">
+                                                    <input type="text" class="form-control" placeholder=" ">
+                                                    <label for="" class="form__label">UPI ID</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <div class="form__div">
+                                                    <input type="tel" class="form-control" placeholder=" ">
+                                                    <label for="" class="form__label" >Phone Number</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <div class="form__div">
+                                                    <input type="password" class="form-control" placeholder=" ">
+                                                    <label for="" class="form__label">VPA</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form__div">
+                                                    <input type="password" class="form-control" placeholder=" ">
+                                                    <label for="" class="form__label">UPI PIN</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="btn  w-100" onclick="disableFields()">Submit</div>
+                                            </div>
+                                        </div>
+                                    </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body border p-0">
+                        <p>
+                            <a class="btn  p-2 w-100 h-100 d-flex align-items-center justify-content-between"
+                                data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true"
+                                aria-controls="collapseExample">
+                                <span class="fw-bold">Credit Card</span>
+                                <span class="">
+                                    <span class="fab fa-cc-amex"></span>
+                                    <span class="fab fa-cc-mastercard"></span>
+                                    <span class="fab fa-cc-discover"></span>
+                                </span>
+                            </a>
+                        </p>
+                        <div class="collapse show p-3 pt-0" id="collapseExample">
+                            <div class="row">
+                                <div class="col-lg-5 mb-lg-0 mb-3">
+                                    <p class="h4 mb-0">Summary</p>
+                                    <p class="mb-0"><span class="fw-bold">Payment For:</span><span class="c-green"> Appointment Booking</span>
+                                    </p>
+                                    <p class="mb-0">
+                                        <span class="fw-bold">Fees:</span>
+                                        <span class="c-green"> 250</span>
+                                    </p>
+                                    <p class="mb-0">It's important to keep in mind that credit card payments may be subject to interest charges, so it's best to pay off the balance in full each month to avoid accumulating debt.</p>
+                                </div>
+                                <div class="col-lg-7">
+                                    <form action="" class="form">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form__div">
+                                                    <input type="text" class="form-control" placeholder=" ">
+                                                    <label for="" class="form__label">Card Number</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <div class="form__div">
+                                                    <input type="text" class="form-control" placeholder=" ">
+                                                    <label for="" class="form__label">MM / yy</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <div class="form__div">
+                                                    <input type="password" class="form-control" placeholder=" ">
+                                                    <label for="" class="form__label">cvv code</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form__div">
+                                                    <input type="text" class="form-control" placeholder=" ">
+                                                    <label for="" class="form__label">name on the card</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="btn  w-100 " onclick="disableFields()">Submit</div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="btn  payment"  onclick="showAlert()">
+                    Make Payment
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+    <pre>
+
+
+
+
+  </pre>
+    <div id="chevron">
+
+        <br>
+        <img src="images/1.png">
+        <h1 class="last">findYourDoc</h1>
+        <br>
+        <br>
+        <p>Copyright @ 2023 | Vaishali, Khushboo, Chetali and Jasmeen</p>
+        <br>
+
+
+    </div>
+    <div style="margin:0px; background-color:#ff4c68">
+        <br>
+        <br>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+        <script>
+            function disableFields(event) {
+                const form = document.querySelector('.form');
+                
+                // Loop through all input fields
+                const inputs = form.querySelectorAll('input');
+                for (let i = 0; i < inputs.length; i++) {
+                  // If an input field is blank, show an alert message and prevent form submission
+                  if (inputs[i].value === '') {
+                    alert('Please fill out all fields');
+                    event.preventDefault();
+                    return;
+                  }
+                }
+              
+                // Disable all input fields and change their background color to grey
+                inputs.forEach(input => {
+                  input.disabled = true;
+                  input.style.backgroundColor = 'lightgrey';
+                });
+                
+                // Disable the submit button
+                form.querySelector('.btn').disabled = true;
+              }
+              
+              // Add an event listener to the submit button
+              const submitButton = document.querySelector('.btn');
+              submitButton.addEventListener('click', disableFields);
+              
+              
+              
+        </script>
+</body>
+
+</html>
